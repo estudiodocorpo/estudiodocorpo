@@ -1,0 +1,27 @@
+{
+  "name": "estudiodocorpo",
+  "version": "0.0.1",
+  "description": "Grupo de Dança Estúdio do Corpo",
+  "main": "index.html",
+  "dependencies": {
+    "sass": "^1.27.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
+    "build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matananh/estudiodocorpo.git"
+  },
+  "keywords": [
+    "Dança"
+  ],
+  "author": "Davi Matana Promoter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matananh/estudiodocorpo/issues"
+  },
+  "homepage": "https://github.com/matananh/estudiodocorpo#readme"
+}
