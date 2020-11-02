@@ -10,4 +10,341 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
   display: flex;
 }
 
+body {
+  max-width: 1920px;
+  justify-content: center;
+  background-color: var(--gray);
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Light Italic"), url("../fonts/OpenSans-LightItalic.ttf") format(truetype);
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans SemiBold Italic"), url("../fonts/OpenSans-SemiBoldItalic.ttf") format(truetype);
+  font-style: italic;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format(truetype);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold Italic"), url("../fonts/OpenSans-BoldItalic.ttf") format(truetype);
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans ExtraBold"), url("../fonts/OpenSans-ExtraBold.ttf") format(truetype);
+  font-style: normal;
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans ExtraBold Italic"), url("../fonts/OpenSans-ExtraBoldItalic.ttf") format(truetype);
+  font-style: italic;
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), url("../fonts/Roboto-Light.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Ligth Italic"), url("../fonts/Roboto-LightItalic.ttf") format(truetype);
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Regular"), url("../fonts/Roboto-Regular.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), url("../fonts/Roboto-Medium.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium Italic"), url("../fonts/Roboto-MediumItalic.ttf") format(truetype);
+  font-style: italic;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), url("../fonts/Roboto-Bold.ttf") format(truetype);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold Italic"), url("../fonts/Roboto-BoldItalic.ttf") format(truetype);
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), url("../fonts/Roboto-Black.ttf") format(truetype);
+  font-style: normal;
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black Italic"), url("../fonts/Roboto-BlackItalic.ttf") format(truetype);
+  font-style: italic;
+  font-weight: bolder;
+}
+:root {
+  --white: #FFF;
+  --black: #000;
+  --black-hover: #111;
+  --black-active: #222;
+  --black-10: #0000001a;
+  --black-50: rgba(0, 0, 0, .5);
+  --black-75: #000000bf;
+  --dark-0: #333;
+  --dark-1: #000000BF;
+  --gray: #79756C;
+  --gray-0: #707070;
+  --gray-1: #7E7E7E;
+  --gray-2: #9A9A99;
+  --gray-3: #CCC;
+  --gray-4: #00000029;
+  --gray-5: #E5E3DFBF;
+  --gray-6: #F8F8F8;
+  --gray-7: #E5E3DF;
+  --gray-8: #DDD;
+  --gray-9: #999;
+  --gray-10: #EEE;
+  --gray-11: #444;
+  --gray-12: #E8E8E8;
+  --red: #E32119;
+  --red-hover: #E44238;
+  --red-active: #C91D16;
+  --green: #30F129;
+  --green-hover: #00BE60;
+  --green-active: #00773C;
+  --blue: #199BD4;
+  --blue-hover: #1CABE9;
+  --blue-active: #00A0E6;
+  --sucess: #D4EDDA;
+  --sucess-border: #c3E6CB;
+  --sucess-color: #155724;
+  --danger: #F8D7DA;
+  --danger-border: #F5C6CB;
+  --danger-color: #721C24;
+  --space: 20px;
+  --border-radius: 5px;
+  --border-radius-2: 20px;
+  --border-radius-3: 50px;
+  --mobile: 576px;
+  --tablet: 768px;
+  --landscape: 992px;
+  --desktop: 1200px;
+  --retina: 1920px;
+}
+
+#header {
+  min-width: 320px;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--black);
+  margin: 0;
+  padding: 0;
+  height: 120px;
+  position: relative;
+}
+#header .logo {
+  align-items: center;
+  width: 177px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  z-index: 10;
+}
+#header .menu {
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+#header .menu .close-menu {
+  display: none;
+}
+#header .menu .links {
+  display: none;
+}
+#header .menu .login {
+  display: none;
+}
+#header .open-menu {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 30px;
+  align-self: center;
+  z-index: 1;
+  cursor: pointer;
+}
+#header.open-menu-header .logo {
+  left: calc(50vw - 88px);
+  top: 40px;
+}
+#header.open-menu-header .menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+#header.open-menu-header .menu .close-menu {
+  display: flex;
+  z-index: 3;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+#header.open-menu-header .menu .links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 180px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#header.open-menu-header .menu .links li {
+  margin: 0;
+  padding: 0;
+}
+#header.open-menu-header .menu .links li a {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--green);
+  text-decoration: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#header.open-menu-header .menu .login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  top: 450px;
+}
+#header.open-menu-header .menu .login div svg {
+  width: 56px;
+  height: 56px;
+}
+#header.open-menu-header .menu .login div .logar {
+  align-self: center;
+}
+#header.open-menu-header .menu .login div .logar a {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--green);
+  margin-left: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#header.open-menu-header .menu .login div .logado {
+  display: none;
+}
+#header.open-menu-header .menu .login button {
+  display: none;
+}
+#header.open-menu-header .menu.logged {
+  flex-direction: column;
+}
+#header.open-menu-header .menu.logged .login {
+  flex-direction: column;
+}
+#header.open-menu-header .menu.logged .login div .logar {
+  display: none;
+}
+#header.open-menu-header .menu.logged .login div .logado {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: var(--green);
+  justify-content: center;
+}
+#header.open-menu-header .menu.logged .login div .logado .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+#header.open-menu-header .menu.logged .login div .logado .email {
+  font-size: 15px;
+}
+#header.open-menu-header .menu.logged .login button {
+  display: flex;
+  min-width: 100px;
+  border: none;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  color: var(--white);
+  background-color: var(--green);
+  margin-top: 10px;
+}
+#header.open-menu-header .menu.logged .login button:hover {
+  background-color: var(--gray-7);
+}
+#header.open-menu-header .menu.logged .login button:active {
+  background-color: var(--gray-9);
+}
+#header.open-menu-header .open-menu {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */

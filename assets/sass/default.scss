@@ -9,3 +9,11 @@
 body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, form {
   display: flex;
 }
+
+body {
+  max-width: 1920px;
+  justify-content: center;
+  background-color: var(--gray);
+  margin: 0;
+  padding: 0;
+}

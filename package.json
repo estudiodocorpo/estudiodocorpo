@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
-    "build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed"
+    "build": "sass assets/sass/main.scss:assets/css/main.min.css --style=compressed"
   },
   "repository": {
     "type": "git",
