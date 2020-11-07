@@ -11,9 +11,34 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 }
 
 body {
-  max-width: 1920px;
-  justify-content: center;
+  min-width: 320px;
+  width: 100%;
   background-color: var(--gray);
   margin: 0;
   padding: 0;
+  flex-direction: column;
+  > main {
+    min-height: calc(100vh - 500px);
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    > main {
+      min-height: calc(100vh - 350px);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  > main {
+    min-height: calc(100vh - 250px);
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    max-width: 1920px;
+    margin-left: calc(50vw - calc(var(--retina) / 2));
+  }
 }

@@ -11,13 +11,33 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 }
 
 body {
-  max-width: 1920px;
-  justify-content: center;
+  min-width: 320px;
+  width: 100%;
   background-color: var(--gray);
   margin: 0;
   padding: 0;
+  flex-direction: column;
+}
+body > main {
+  min-height: calc(100vh - 500px);
 }
 
+@media (min-width: 768px) {
+  body > main {
+    min-height: calc(100vh - 350px);
+  }
+}
+@media (min-width: 1200px) {
+  > main {
+    min-height: calc(100vh - 250px);
+  }
+}
+@media (min-width: 1920px) {
+  body {
+    max-width: 1920px;
+    margin-left: calc(50vw - calc(var(--retina) / 2));
+  }
+}
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format(truetype);
@@ -188,12 +208,14 @@ body {
 }
 #header .logo {
   align-items: center;
-  width: 177px;
-  height: 100px;
   position: absolute;
   top: 10px;
   left: 40px;
   z-index: 10;
+}
+#header .logo svg {
+  width: 177px;
+  height: 100px;
 }
 #header .menu {
   z-index: 2;
@@ -262,7 +284,7 @@ body {
   text-transform: uppercase;
   color: var(--green);
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: var(--space);
   cursor: pointer;
 }
 #header.open-menu-header .menu .login {
@@ -345,6 +367,469 @@ body {
 }
 #header.open-menu-header .open-menu {
   display: none;
+}
+
+@media (min-width: 375px) {
+  #header.open-menu-header .menu .links {
+    top: 200px;
+  }
+  #header.open-menu-header .menu .links li a {
+    margin-bottom: calc(var(--space) * 2 );
+  }
+  #header.open-menu-header .menu .login {
+    top: 600px;
+  }
+  #header.open-menu-header .menu.logged .login button {
+    margin-top: var(--space);
+  }
+}
+@media (min-width: 1200px) {
+  #header {
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  #header .logo {
+    background-color: var(--black);
+    width: 215px;
+    height: 142px;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  #header .logo svg {
+    width: 175px;
+    height: 100px;
+  }
+  #header .menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 215px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header .menu .close-menu {
+    display: none;
+  }
+  #header .menu .links {
+    display: flex;
+    padding: 0 30px;
+  }
+  #header .menu .links li {
+    margin: 0;
+    padding: 0;
+  }
+  #header .menu .links li a {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--green);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #header .menu .links li + li {
+    margin-left: var(--space);
+  }
+  #header .menu .login {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    min-width: 300px;
+    right: 30px;
+    justify-content: flex-end;
+    align-self: center;
+  }
+  #header .menu .login svg {
+    width: 50px;
+    height: 50px;
+  }
+  #header .menu .login .logar {
+    align-items: center;
+    margin-left: 15px;
+  }
+  #header .menu .login .logar a {
+    text-decoration: none;
+    color: var(--green);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  #header .menu .login .logado {
+    display: none;
+  }
+  #header .menu .login #btn-exit {
+    display: none;
+  }
+  #header .menu.logged {
+    flex-direction: row;
+  }
+  #header .menu.logged .links {
+    padding: 0;
+  }
+  #header .menu.logged .login {
+    flex-direction: row;
+    right: 10px;
+    min-width: 350px;
+  }
+  #header .menu.logged .login div {
+    flex-direction: row;
+  }
+  #header .menu.logged .login div svg {
+    width: 40px;
+    height: 40px;
+  }
+  #header .menu.logged .login div .logar {
+    display: none;
+  }
+  #header .menu.logged .login div .logado {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    color: var(--green);
+  }
+  #header .menu.logged .login div .logado .name {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  #header .menu.logged .login div .logado .email {
+    font-size: 12px;
+  }
+  #header .menu.logged .login #btn-exit {
+    display: flex;
+    min-width: 60px;
+    border: none;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    background-color: var(--green);
+    margin-left: 10px;
+  }
+  #header .menu.logged .login #btn-exit:hover {
+    background-color: var(--gray-7);
+  }
+  #header .menu.logged .login #btn-exit:active {
+    background-color: var(--gray-9);
+  }
+  #header .open-menu {
+    display: none;
+  }
+}
+@media (min-width: 1920px) {
+  #header {
+    justify-content: center;
+  }
+  #header .menu {
+    justify-content: start;
+  }
+  #header .menu .links {
+    display: flex;
+    padding: 0 50px;
+  }
+  #header .menu .links li a {
+    font-size: 22px;
+  }
+  #header .menu .links li + li {
+    margin-left: calc(var(--space) * 3);
+  }
+  #header .menu .login {
+    min-width: 500px;
+    right: 50px;
+  }
+  #header .menu .login .logar {
+    margin-left: 20px;
+  }
+  #header .menu .login .logar a {
+    font-size: 22px;
+  }
+  #header .menu.logged .links {
+    padding: 0 50px;
+  }
+  #header .menu.logged .login {
+    right: 50px;
+    align-items: center;
+  }
+  #header .menu.logged .login div {
+    justify-content: center;
+  }
+  #header .menu.logged .login div svg {
+    width: 50px;
+    height: 50px;
+  }
+  #header .menu.logged .login div .logar {
+    display: none;
+  }
+  #header .menu.logged .login div .logado {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    color: var(--green);
+  }
+  #header .menu.logged .login div .logado .name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #header .menu.logged .login div .logado .email {
+    font-size: 15px;
+  }
+  #header .menu.logged .login #btn-exit {
+    display: flex;
+    min-width: 100px;
+    border: none;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    background-color: var(--green);
+    margin-left: 10px;
+  }
+  #header .menu.logged .login #btn-exit:hover {
+    background-color: var(--gray-7);
+  }
+  #header .menu.logged .login #btn-exit:active {
+    background-color: var(--gray-9);
+  }
+}
+#home {
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--space);
+}
+#home .banners {
+  flex-direction: column;
+  margin-bottom: var(--space);
+}
+#home .banners picture {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 250px;
+}
+#home .banners picture img {
+  width: 100%;
+  height: 100%;
+}
+#home .banners .seletors {
+  flex-direction: row;
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+  top: 220px;
+}
+#home .banners .seletors .seletor_border {
+  border: var(--white) 3px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#home .banners .seletors .seletor_border .seletor_body {
+  width: 10px;
+  height: 10px;
+  border: none;
+}
+#home .banners .seletors .seletor_border .seletor_body.active {
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+  border: none;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  #home .banners picture {
+    width: 100%;
+    height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  #home .banners picture {
+    height: 600px;
+  }
+}
+@media (min-width: 1920px) {
+  #home {
+    max-width: 1920px;
+  }
+  #home .banners picture {
+    height: 750px;
+  }
+}
+#footer {
+  min-width: 320px;
+  width: 100%;
+  height: 400px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--black);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#footer .logos {
+  flex-direction: column;
+  margin-bottom: var(--space);
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+#footer .logos .logo-estudio {
+  margin-bottom: var(--space);
+}
+#footer .logos .logo-estudio svg {
+  width: 115px;
+  height: 62px;
+}
+#footer .logos .logo-mbcv {
+  margin-bottom: var(--space);
+}
+#footer .logos .logo-mbcv picture {
+  width: 160px;
+  height: 62px;
+}
+#footer .logos .logo-mbcv picture img {
+  width: 160px;
+  height: 62px;
+}
+#footer .reverse {
+  flex-direction: column-reverse;
+  margin: 0;
+  padding: 0;
+}
+#footer .reverse .copyright {
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: bold;
+  color: var(--gray-3);
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  margin-bottom: 15px;
+}
+#footer .reverse .redes-sociais {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space);
+}
+#footer .reverse .redes-sociais .line-1 {
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+#footer .reverse .redes-sociais .line-1 svg {
+  width: 56px;
+  height: 56px;
+  fill: var(--white);
+}
+#footer .reverse .redes-sociais .line-1 svg + svg {
+  margin-left: 15px;
+}
+#footer .reverse .redes-sociais .line-2 {
+  flex-direction: row;
+}
+#footer .reverse .redes-sociais .line-2 svg {
+  width: 56px;
+  height: 56px;
+  fill: var(--white);
+}
+#footer .reverse .redes-sociais .line-2 svg + svg {
+  margin-left: 15px;
+}
+
+@media (min-width: 375px) {
+  #footer .reverse .copyright {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  #footer {
+    flex-direction: row;
+    height: 250px;
+  }
+  #footer .logos {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+  #footer .reverse {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .reverse .redes-sociais {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+  #footer .reverse .copyright {
+    display: block;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: calc(50vh - 310px);
+  }
+}
+@media (min-width: 1200px) {
+  #footer {
+    height: 110px;
+    flex-direction: row;
+    object-position: bottom;
+  }
+  #footer .logos {
+    flex-direction: row;
+  }
+  #footer .reverse {
+    flex-direction: row;
+  }
+  #footer .reverse .copyright {
+    position: absolute;
+    right: calc(100vh - 280px);
+    bottom: 15px;
+  }
+  #footer .reverse .redes-sociais {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #footer .reverse .redes-sociais .line-1 {
+    margin: 0;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 1920px) {
+  #footer {
+    max-width: 1920px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
