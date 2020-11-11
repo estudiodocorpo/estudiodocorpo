@@ -1,5 +1,6 @@
 :root {
   --white: #FFF;
+  --white-opacity: rgba(255,255,255,.6);
   --black: #000;
   --black-hover: #111;
   --black-active: #222;
@@ -25,6 +26,7 @@
   --red: #E32119;
   --red-hover: #E44238;
   --red-active: #C91D16;
+  --green-opacity: rgba(48,241,41,.6);
   --green: #30F129;
   --green-hover: #00BE60;
   --green-active: #00773C;
