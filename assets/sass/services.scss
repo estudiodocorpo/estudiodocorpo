@@ -263,6 +263,96 @@
         }
       }
     }
+    #courses {
+      padding: 30px;
+      min-height: 650px;
+      position: relative;
+      div {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        span {
+          position: relative;
+          top: -10px;
+          left: 70px;
+        }
+      }
+      img {
+        position: absolute;
+        top: 300px;
+        left: 30px;
+        width: 300px;
+        border-radius: var(--border-radius-2);
+      }
+      .content_services {
+        position: absolute;
+        top: 30px;
+        left: 350px;
+        p{
+          font-size: 25px;
+        }
+      }
+    }
+    #school_dance {
+      padding: 30px;
+      min-height: 700px;
+      position: relative;
+      div {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        span {
+          position: relative;
+          top: -10px;
+          left: 70px;
+        }
+      }
+      img {
+        position: absolute;
+        top: 200px;
+        left: 30px;
+        width: 300px;
+        border-radius: var(--border-radius-2);
+      }
+      .content_services {
+        position: absolute;
+        top: 30px;
+        left: 350px;
+        p{
+          font-size: 25px;
+        }
+      }
+    }
+    #school_ministerial {
+      padding: 30px;
+      min-height: 650px;
+      position: relative;
+      div {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        span {
+          position: relative;
+          top: -10px;
+          left: 70px;
+        }
+      }
+      img {
+        position: absolute;
+        top: 300px;
+        left: 30px;
+        width: 300px;
+        border-radius: var(--border-radius-2);
+      }
+      .content_services {
+        position: absolute;
+        top: 30px;
+        left: 350px;
+        p{
+          font-size: 25px;
+        }
+      }
+    }
   }
 }
 
@@ -293,6 +383,27 @@
               }
             }
           }
+        }
+      }
+    }
+    #courses {
+      .content_services {
+        p{
+          font-size: 30px;
+        }
+      }
+    }
+    #school_dance {
+      .content_services {
+        p{
+          font-size: 30px;
+        }
+      }
+    }
+    #school_ministerial {
+      .content_services {
+        p{
+          font-size: 30px;
         }
       }
     }
