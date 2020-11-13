@@ -191,7 +191,7 @@
     min-width: 320px;
     width: 100%;
     padding: 20px 0;
-    background-image: url(../img/background/background_3@3x.png);
+    background-image: url(../img/background/background_2@3x.png);
     .photos {
       width: 100%;
       flex-direction: column;
@@ -445,8 +445,10 @@
     max-width: 1920px;
     .banners {
       picture {
+        max-width: 1920px;
         height: 750px;
         img {
+          max-width: 1920px;
           height: 750px;
         }
       }
