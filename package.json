@@ -3,14 +3,16 @@
   "version": "0.0.1",
   "description": "Grupo de Dança Estúdio do Corpo",
   "main": "index.html",
-  "dependencies": {
-    "sass": "^1.27.0"
+  "devDependencies": {
+    "sass": "^1.27.0",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   },
-  "devDependencies": {},
   "scripts": {
     "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
-    "build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed",
-    "build2": "sass assets/sass/main.scss:assets/css/main.min.css --style=compressed"
+    "sass-build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed",
+    "sass-build2": "sass assets/sass/main.scss:assets/css/main.min.css --style=compressed"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,14 @@
   "bugs": {
     "url": "https://github.com/matananh/estudiodocorpo/issues"
   },
-  "homepage": "https://github.com/matananh/estudiodocorpo#readme"
+  "homepage": "https://github.com/matananh/estudiodocorpo#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "date-fns": "^2.19.0",
+    "dotenv": "^8.2.0",
+    "firebase": "^8.3.1",
+    "googleapis": "^68.0.0",
+    "imask": "^6.0.7",
+    "nodemailer": "^6.5.0"
+  }
 }
