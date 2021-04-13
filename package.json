@@ -1,6 +1,6 @@
 {
   "name": "estudiodocorpo",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Grupo de Dança Estúdio do Corpo",
   "main": "index.html",
   "devDependencies": {
@@ -10,9 +10,11 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
-    "sass-build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed",
-    "sass-build2": "sass assets/sass/main.scss:assets/css/main.min.css --style=compressed"
+    "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
+    "sass-build": "sass publi/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
+    "sass-build2": "sass public/assets/sass/main.scss:public/assets/css/main.min.css --style=compressed",
+    "build": "webpack --mode=production",
+    "dev": "webpack serve --content-base public --hot"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   "homepage": "https://github.com/matananh/estudiodocorpo#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "compression-webpack-plugin": "^7.1.2",
     "date-fns": "^2.19.0",
     "dotenv": "^8.2.0",
     "firebase": "^8.3.1",

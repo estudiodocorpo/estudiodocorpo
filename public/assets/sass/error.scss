@@ -1,0 +1,99 @@
+@use "_vars";
+
+#error {
+  width: 100%;
+  flex-direction: column;
+  .background_error {
+    background-image: url(../img/background/png/background@3x.png);
+    background-size: 1920px;
+    background-position-x: 650px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    div {
+      flex-direction: column;
+      h1 {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+        span {
+          color: vars.$red;
+          font-weight: bold;
+        }
+      }
+      h2 {
+        font-size: 30px;
+      }
+    }
+    picture {
+      img {
+        width: 200px;
+        height: 300px;
+        border-radius: vars.$border-radius-2;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #error {
+    .background_error {
+      height: 674px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #error {
+    .background_error {
+      height: 588px;
+      background-size: 100%;
+      background-position: 0;
+      flex-direction: row;
+      div {
+        h1 {
+          font-size: 40px;
+          margin: 0;
+        }
+      }
+      picture {
+        img {
+          width: 300px;
+          height: 450px;
+          margin: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  #error {
+    .background_error {
+      height: 903px;
+      background-size: 100%;
+      background-position: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 50px;
+      div {
+        h1 {
+          font-size: 50px;
+          margin: 0;
+        }
+        h2 {
+          font-size: 40px;
+        }
+      }
+      picture {
+        img {
+          width: 400px;
+          height: 600px;
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+}

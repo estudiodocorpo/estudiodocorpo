@@ -1,0 +1,93 @@
+@use "_vars";
+@use "_mixins";
+@use "_fonts";
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body,
+div,
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section,
+ul,
+ol,
+li,
+button,
+figure,
+picture,
+hr,
+form {
+  display: flex;
+}
+
+body {
+  min-width: vars.$mobile;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  > main {
+    min-height: calc(100vh - 520px);
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-green {
+  @include mixins.button-green;
+}
+
+.btn-red {
+  @include mixins.button-red;
+}
+
+.btn-blue {
+  @include mixins.button-blue;
+}
+
+.btn-black {
+  @include mixins.button-black;
+}
+
+.btn-white {
+  @include mixins.button-white;
+}
+
+.field {
+  @include mixins.input;
+}
+
+@media (min-width: vars.$tablet) {
+  body {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: vars.$desktop) {
+  body {
+    flex-direction: column;
+    > main {
+      min-height: calc(100vh - 220px);
+    }
+  }
+}
+
+@media (min-width: vars.$retina) {
+  body {
+    flex-direction: column;
+    margin-left: calc(50vw - calc(vars.$retina / 2));
+  }
+}

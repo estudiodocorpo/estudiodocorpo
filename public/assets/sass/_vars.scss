@@ -1,0 +1,60 @@
+@use "sass:color";
+
+$white: #fff;
+$white-opacity: rgba($white, 0.6);
+$white-hover: #f3ecec;
+$white-active: #d6d4d4;
+
+$black: #000;
+$black-hover: #111;
+$black-active: #222;
+$black-10: rgba($black, 0.1);
+$black-50: rgba($black, 0.5);
+$black-75: rgba($black, 0.75);
+
+$dark: #1d1c1c;
+$dark-1: rgba($dark, 0.7);
+
+$gray: #3e3f40;
+$gray-opacity: rgba($gray, 0.6);
+$gray-0: #444;
+$gray-1: #79756c;
+$gray-2: #999;
+$gray-3: #ccc;
+$gray-4: #e5e3df;
+$gray-5: #ddd;
+$gray-6: #f8f8f8;
+
+$red: #e32119;
+$red-opacity: rgba($red, 0.6);
+$red-hover: #e44238;
+$red-active: #c91d16;
+
+$green: #30f129;
+$green-opacity: rgba($green, 0.6);
+$green-hover: #00be60;
+$green-active: #11a60c;
+
+$blue: #199bd4;
+$blue-opacity: rgba($blue, 0.6);
+$blue-hover: #1cabe9;
+$blue-active: #00a0e6;
+
+$sucess: #d4edda;
+$sucess-border: #c3e6cb;
+$sucess-color: #155724;
+
+$danger: #f8d7da;
+$danger-border: #f5c6cb;
+$danger-color: #721c24;
+
+$space: 20px;
+$border-radius: 5px;
+$border-radius-2: 20px;
+$border-radius-3: 50px;
+$border-radius-4: 80px;
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1200px;
+$retina: 1920px;

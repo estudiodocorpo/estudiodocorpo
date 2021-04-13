@@ -1,0 +1,424 @@
+@use "_vars";
+@use "_mixins";
+
+#services {
+  flex-direction: column;
+  #links_services {
+    width: 100%;
+    min-width: 320px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../img/background/png/background_2.png);
+    background-size: 100vw;
+    margin-bottom: 20px;
+    .links_courses,
+    .links_school_dance,
+    .links_school_ministerial {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      a {
+        text-decoration: none;
+        flex-direction: row;
+        width: 100%;
+        height: 150px;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        color: vars.$black;
+        border-bottom: vars.$black 2px dashed;
+        div {
+          justify-content: flex-start;
+          align-items: center;
+          align-self: center;
+          svg {
+            width: 70px;
+            height: 90px;
+            margin-right: 5px;
+          }
+          .area_title {
+            flex-direction: column;
+            width: 150px;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .title1 {
+              font-size: 45px;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+            .title2 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #courses {
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 20px;
+    background-color: vars.$green-opacity;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    div {
+      margin-bottom: 10px;
+      svg {
+        width: 90px;
+        height: 110px;
+        margin-right: 10px;
+      }
+      .courses_title {
+        flex-direction: column;
+        .title1 {
+          font-size: 45px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        .title2 {
+          font-size: 20px;
+        }
+      }
+    }
+    img {
+      width: 90%;
+      border-radius: vars.$border-radius;
+    }
+    .content_services {
+      flex-direction: column;
+      padding: 10px;
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+  #school_dance {
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 20px;
+    background-color: vars.$green-opacity;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    div {
+      margin-bottom: 10px;
+      svg {
+        width: 90px;
+        height: 110px;
+        margin-right: 10px;
+      }
+      .school_dance_title {
+        flex-direction: column;
+        .title1 {
+          font-size: 45px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        .title2 {
+          font-size: 20px;
+        }
+      }
+    }
+    img {
+      width: 90%;
+      border-radius: vars.$border-radius;
+    }
+    .content_services {
+      flex-direction: column;
+      padding: 10px;
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+  #school_ministerial {
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 20px;
+    background-color: vars.$green-opacity;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    div {
+      margin-bottom: 10px;
+      svg {
+        width: 90px;
+        height: 110px;
+        margin-right: 10px;
+      }
+      .school_ministerial_title {
+        flex-direction: column;
+        .title1 {
+          font-size: 45px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        .title2 {
+          font-size: 20px;
+        }
+      }
+    }
+    img {
+      width: 90%;
+      border-radius: vars.$border-radius;
+    }
+    .content_services {
+      flex-direction: column;
+      padding: 10px;
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  #services {
+    #links_services {
+      .links_courses,
+      .links_school_dance,
+      .links_school_ministerial {
+        a {
+          height: 175px;
+          padding: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #services {
+    #links_services {
+      .links_courses,
+      .links_school_dance,
+      .links_school_ministerial {
+        a {
+          height: 220px;
+        }
+      }
+    }
+    #courses {
+      padding: 20px;
+      img {
+        width: 70%;
+      }
+      .content_services {
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+    #school_dance {
+      padding: 20px;
+      img {
+        width: 70%;
+      }
+      .content_services {
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+    #school_ministerial {
+      padding: 20px;
+      img {
+        width: 70%;
+      }
+      .content_services {
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #services {
+    #links_services {
+      flex-direction: row;
+      height: 300px;
+      .links_courses,
+      .links_school_dance,
+      .links_school_ministerial {
+        height: 100%;
+        a {
+          height: 100%;
+          border-bottom: none;
+          border-right: vars.$black 2px dashed;
+          padding-top: 80px;
+          div {
+            svg {
+              width: 120px;
+              height: 150px;
+            }
+            .area_title {
+              width: 100%;
+              .title1 {
+                font-size: 50px;
+              }
+              .title2 {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #courses {
+      padding: 30px;
+      min-height: 650px;
+      position: relative;
+      div {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        span {
+          position: relative;
+          top: -10px;
+          left: 70px;
+        }
+      }
+      img {
+        position: absolute;
+        top: 300px;
+        left: 30px;
+        width: 300px;
+        border-radius: vars.$border-radius-2;
+      }
+      .content_services {
+        position: absolute;
+        top: 30px;
+        left: 350px;
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+    #school_dance {
+      padding: 30px;
+      min-height: 700px;
+      position: relative;
+      div {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        span {
+          position: relative;
+          top: -10px;
+          left: 70px;
+        }
+      }
+      img {
+        position: absolute;
+        top: 200px;
+        left: 30px;
+        width: 300px;
+        border-radius: vars.$border-radius-2;
+      }
+      .content_services {
+        position: absolute;
+        top: 30px;
+        left: 350px;
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+    #school_ministerial {
+      padding: 30px;
+      min-height: 650px;
+      position: relative;
+      div {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        span {
+          position: relative;
+          top: -10px;
+          left: 70px;
+        }
+      }
+      img {
+        position: absolute;
+        top: 300px;
+        left: 30px;
+        width: 300px;
+        border-radius: vars.$border-radius-2;
+      }
+      .content_services {
+        position: absolute;
+        top: 30px;
+        left: 350px;
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  #services {
+    #links_services {
+      flex-direction: row;
+      height: 400px;
+      .links_courses,
+      .links_school_dance,
+      .links_school_ministerial {
+        height: 100%;
+        a {
+          height: 100%;
+          border-bottom: none;
+          border-right: vars.$black 2px dashed;
+          padding-top: 110px;
+          div {
+            svg {
+              width: 170px;
+              height: 190px;
+            }
+            .area_title {
+              width: 100%;
+              .title1 {
+                font-size: 65px;
+              }
+              .title2 {
+                font-size: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #courses {
+      .content_services {
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+    #school_dance {
+      .content_services {
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+    #school_ministerial {
+      .content_services {
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

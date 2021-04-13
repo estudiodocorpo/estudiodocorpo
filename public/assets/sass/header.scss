@@ -1,0 +1,294 @@
+@use "_vars";
+@use "_mixins";
+@use "_fonts";
+
+#header {
+  width: 100%;
+  background-color: vars.$gray;
+  position: relative;
+  .header-size {
+    min-width: vars.$mobile;
+    width: 100%;
+    height: 120px;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-between;
+    transition: ease-in-out 1s all;
+    .logo {
+      margin-left: 20px;
+      align-items: center;
+      z-index: 1;
+      svg {
+        width: 177px;
+        height: 99px;
+      }
+    }
+    .menu {
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+      .close-menu {
+        display: none;
+        z-index: 1;
+      }
+      .links {
+        display: none;
+        z-index: 1;
+      }
+      .login {
+        display: none;
+        z-index: 1;
+      }
+      .open-menu {
+        margin-right: 20px;
+        z-index: 0;
+      }
+    }
+  }
+  &.open-menu-header {
+    background-color: vars.$gray-opacity;
+    z-index: 1;
+    height: 100vh;
+    .logo {
+      z-index: 5;
+      position: absolute;
+      margin-left: calc(50% - 105px);
+      margin-top: 20px;
+    }
+    .menu {
+      width: 100vw;
+      height: 100vh;
+      .close-menu {
+        display: flex;
+        z-index: 1;
+        color: vars.$white;
+        font-weight: bold;
+        font-size: 20px;
+        top: 20px;
+        right: 20px;
+        position: absolute;
+      }
+      .links {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        margin-bottom: 50px;
+        margin-top: 100px;
+        .item-links {
+          margin-bottom: 15px;
+          a {
+            text-decoration: none;
+            color: vars.$green;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+      .login {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        div {
+          margin-bottom: 20px;
+          svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+          }
+          .login-on {
+            display: none;
+          }
+          .login {
+            padding-top: 5px;
+            a {
+              text-decoration: none;
+              color: vars.$white;
+              font-weight: bold;
+              font-size: 20px;
+            }
+          }
+        }
+        button {
+          display: none;
+        }
+      }
+      .open-menu {
+        display: none;
+      }
+    }
+  }
+  &.logged {
+    .menu {
+      .login {
+        div {
+          margin-bottom: 20px;
+          svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+          }
+          .login-on {
+            display: flex;
+            flex-direction: column;
+            color: vars.$white;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          .login {
+            display: none;
+          }
+        }
+        button {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: vars.$desktop) {
+  #header {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    .header-size {
+      max-width: vars.$retina;
+      width: 100%;
+      height: 72px;
+      flex-direction: row;
+      padding: 0;
+      justify-content: space-between;
+      .logo {
+        margin-left: 00px;
+        z-index: 1;
+        background-color: vars.$gray;
+        width: 215px;
+        height: 142px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0 vars.$border-radius-4 0;
+        svg {
+          width: 177px;
+          height: 99px;
+        }
+      }
+      .menu {
+        align-items: center;
+        transition: ease-in-out 1s all;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: calc(100vw - 215px);
+        .close-menu {
+          display: none;
+          z-index: 1;
+        }
+        .links {
+          display: flex;
+          z-index: 1;
+          .item-links {
+            margin-bottom: 0;
+            a {
+              text-decoration: none;
+              color: vars.$green;
+              font-size: 20px;
+              font-weight: bold;
+            }
+          }
+          .item-links + .item-links {
+            margin-left: 20px;
+          }
+        }
+        .login {
+          display: flex;
+          z-index: 1;
+          margin-right: 20px;
+          div {
+            svg {
+              width: 40px;
+              height: 40px;
+              margin-right: 10px;
+            }
+            .login-on {
+              display: none;
+            }
+            .login {
+              padding-top: 5px;
+              a {
+                text-decoration: none;
+                color: vars.$white;
+                font-weight: bold;
+                font-size: 20px;
+              }
+            }
+          }
+          button {
+            display: none;
+          }
+        }
+        .open-menu {
+          display: none;
+        }
+      }
+    }
+    &.logged {
+      .menu {
+        .login {
+          align-items: center;
+          div {
+            justify-content: center;
+            margin-bottom: 0;
+            svg {
+              width: 40px;
+              height: 40px;
+              margin-right: 10px;
+            }
+            .login-on {
+              display: flex;
+              flex-direction: column;
+              color: vars.$white;
+              font-size: 16px;
+              font-weight: bold;
+            }
+            .login {
+              display: none;
+            }
+          }
+          button {
+            display: flex;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: vars.$retina) {
+  #header {
+    width: 100%;
+    background-color: vars.$gray;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    .header-size {
+      max-width: vars.$retina;
+      .menu {
+        width: 100%;
+        max-width: calc(1920px - 215px);
+        min-width: max-content;
+      }
+    }
+  }
+}
+
+@media (min-width: 1925px) {
+  #header {
+    .header-size {
+      .logo {
+        border-radius: 0 0 vars.$border-radius-4 vars.$border-radius-4;
+      }
+    }
+  }
+}

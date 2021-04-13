@@ -1,0 +1,189 @@
+@use "_vars";
+@use "_fonts";
+
+@mixin button-green {
+  min-width: 60px;
+  border: none;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: vars.$border-radius;
+  color: vars.$white;
+  background-color: vars.$green;
+  &:hover {
+    background-color: vars.$green-hover;
+  }
+  &:active {
+    background-color: vars.$green-active;
+  }
+}
+
+@mixin button-blue {
+  min-width: 60px;
+  border: none;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: vars.$border-radius;
+  color: vars.$white;
+  background-color: vars.$blue;
+  &:hover {
+    background-color: vars.$blue-hover;
+  }
+  &:active {
+    background-color: vars.$blue-active;
+  }
+}
+
+@mixin button-red {
+  min-width: 60px;
+  border: none;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: vars.$border-radius;
+  color: vars.$white;
+  background-color: vars.$red;
+  &:hover {
+    background-color: vars.$red-hover;
+  }
+  &:active {
+    background-color: vars.$red-active;
+  }
+}
+
+@mixin button-black {
+  min-width: 60px;
+  border: none;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: vars.$border-radius;
+  color: vars.$white;
+  background-color: vars.$black;
+  &:hover {
+    background-color: vars.$black-hover;
+  }
+  &:active {
+    background-color: vars.$black-active;
+  }
+}
+
+@mixin button-white {
+  min-width: 60px;
+  border: none;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: vars.$border-radius;
+  color: vars.$black;
+  background-color: vars.$white;
+  &:hover {
+    background-color: vars.$white-hover;
+  }
+  &:active {
+    background-color: vars.$white-active;
+  }
+}
+
+@mixin input {
+  width: 100%;
+  position: relative;
+  max-width: 100%;
+  label {
+    color: vars.$black;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    left: 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  input {
+    width: 100%;
+    max-width: 700px;
+    height: 100px;
+    background-color: vars.$white-opacity;
+    border: none;
+    border-radius: vars.$border-radius-2;
+    overflow: auto;
+    outline: none;
+    padding-top: 20px;
+    padding-left: 15px;
+    color: vars.$dark;
+    &:focus {
+      border: none;
+      + label {
+        font-size: 10px;
+      }
+    }
+    &[readonly] {
+      border: none;
+      + label {
+        font-size: 10px;
+      }
+    }
+  }
+  textarea {
+    width: 100%;
+    max-width: 700px;
+    height: 230px;
+    background-color: vars.$white-opacity;
+    border: none;
+    border-radius: vars.$border-radius-2;
+    overflow: auto;
+    outline: none;
+    padding-top: 20px;
+    padding-left: 15px;
+    &:focus {
+      border: none;
+      + label {
+        font-size: 10px;
+        z-index: 0;
+      }
+    }
+    &[readonly] {
+      border: none;
+      + label {
+        font-size: 10px;
+        z-index: 0;
+      }
+    }
+  }
+}
