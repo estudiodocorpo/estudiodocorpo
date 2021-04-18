@@ -1,5 +1,4 @@
 const path = require("path");
-const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -8,6 +7,8 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "public"),
   },
-  devtool: "eval-source-map",
-  plugins: [new CompressionPlugin()],
+  devServer: {
+    publicPath: "/public",
+  },
+  devtool: false,
 };

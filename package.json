@@ -5,14 +5,14 @@
   "main": "index.html",
   "devDependencies": {
     "sass": "^1.27.0",
-    "webpack": "^5.28.0",
+    "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
     "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
-    "sass-build": "sass publi/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
-    "sass-build2": "sass public/assets/sass/main.scss:public/assets/css/main.min.css --style=compressed",
+    "sass-build": "sass public/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
+    "sass-build2": "sass public/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
     "build": "webpack --mode=production",
     "dev": "webpack serve --content-base public --hot"
   },

@@ -125,9 +125,10 @@
   width: 100%;
   position: relative;
   max-width: 100%;
+  max-width: 700px;
   label {
     color: vars.$black;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     position: absolute;
     z-index: 2;
@@ -138,6 +139,7 @@
   input {
     width: 100%;
     max-width: 700px;
+    margin-bottom: 20px;
     height: 100px;
     background-color: vars.$white-opacity;
     border: none;
@@ -150,38 +152,39 @@
     &:focus {
       border: none;
       + label {
-        font-size: 10px;
+        font-size: 15px;
       }
     }
     &[readonly] {
       border: none;
       + label {
-        font-size: 10px;
+        font-size: 15px;
       }
     }
   }
   textarea {
     width: 100%;
     max-width: 700px;
+    margin-bottom: 20px;
     height: 230px;
     background-color: vars.$white-opacity;
     border: none;
     border-radius: vars.$border-radius-2;
     overflow: auto;
     outline: none;
-    padding-top: 20px;
+    padding-top: 35px;
     padding-left: 15px;
     &:focus {
       border: none;
       + label {
-        font-size: 10px;
+        font-size: 15px;
         z-index: 0;
       }
     }
     &[readonly] {
       border: none;
       + label {
-        font-size: 10px;
+        font-size: 15px;
         z-index: 0;
       }
     }

@@ -43,7 +43,36 @@ body {
 
 a {
   text-decoration: none;
+  color: vars.$white;
   cursor: pointer;
+  margin-bottom: 10px;
+  &:hover {
+    color: vars.$white-hover;
+  }
+  &:active {
+    color: vars.$white-active;
+  }
+}
+
+#alert {
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  z-index: 99;
+  min-height: 50px;
+  padding: 1rem;
+  width: 80%;
+  max-width: 350px;
+  background-color: vars.$sucess;
+  border-radius: 10px;
+  transition: top 0.3s ease-in-out;
+  &.hide {
+    top: -100%;
+    transition: top 0.3s ease-in-out;
+  }
+  &.danger {
+    background-color: vars.$danger;
+  }
 }
 
 .btn-green {

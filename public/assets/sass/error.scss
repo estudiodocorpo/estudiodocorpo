@@ -1,97 +1,123 @@
 @use "_vars";
+@use "_mixins";
+@use "_fonts";
 
 #error {
   width: 100%;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  .background_error {
-    background-image: url(../img/background/png/background@3x.png);
-    background-size: 1920px;
-    background-position-x: 650px;
+  background-color: vars.$danger;
+  .size-error {
+    min-width: vars.$mobile;
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 10px 30px;
-    div {
+    .background_error {
       flex-direction: column;
-      h1 {
-        font-size: 40px;
-        text-transform: uppercase;
-        font-weight: bold;
-        span {
-          color: vars.$red;
-          font-weight: bold;
+      align-items: center;
+      .text {
+        flex-direction: column;
+        padding: 20px;
+        .titles_errors {
+          flex-direction: column;
+          align-items: center;
+          h1 {
+            font-size: 35px;
+            text-align: center;
+            color: vars.$black;
+            font-weight: bold;
+            span {
+              color: vars.$danger-color;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+          }
+          h2 {
+            font-size: 25px;
+            color: vars.$dark;
+            text-align: center;
+          }
         }
-      }
-      h2 {
-        font-size: 30px;
-      }
-    }
-    picture {
-      img {
-        width: 200px;
-        height: 300px;
-        border-radius: vars.$border-radius-2;
-        margin-bottom: 40px;
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  #error {
-    .background_error {
-      height: 674px;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  #error {
-    .background_error {
-      height: 588px;
-      background-size: 100%;
-      background-position: 0;
-      flex-direction: row;
-      div {
-        h1 {
-          font-size: 40px;
-          margin: 0;
+        .link_back {
+          align-items: center;
+          h2 {
+            font-size: 30px;
+            font-weight: 600;
+            color: vars.$black-75;
+            text-align: center;
+            a {
+              text-decoration: none;
+              text-transform: uppercase;
+              color: vars.$blue;
+              &:hover {
+                color: vars.$blue-hover;
+              }
+              &:active {
+                color: vars.$blue-active;
+              }
+            }
+          }
         }
       }
       picture {
+        width: 300px;
+        height: 450px;
+        margin-bottom: 30px;
+        source {
+          width: 300px;
+          height: 450px;
+        }
         img {
           width: 300px;
           height: 450px;
-          margin: 20px;
         }
       }
     }
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: vars.$tablet) {
   #error {
-    .background_error {
-      height: 903px;
-      background-size: 100%;
-      background-position: 0;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 50px;
-      div {
-        h1 {
-          font-size: 50px;
-          margin: 0;
-        }
-        h2 {
-          font-size: 40px;
+    .size-error {
+      .background_error {
+        flex-direction: row;
+        align-items: center;
+        picture {
+          margin-bottom: 0px;
+          margin: 30px;
         }
       }
-      picture {
-        img {
-          width: 400px;
-          height: 600px;
-          margin-right: 50px;
+    }
+  }
+}
+
+@media (min-width: vars.$desktop) {
+  #error {
+    .size-error {
+      max-width: vars.$retina;
+      width: 100%;
+      .background_error {
+        .text {
+          padding: 50px;
+          .titles_errors {
+            align-items: flex-start;
+            h1 {
+              text-align: start;
+            }
+            h2 {
+              text-align: start;
+            }
+          }
+          .link_back {
+            align-items: flex-start;
+            h2 {
+              text-align: start;
+            }
+          }
+        }
+        picture {
+          margin-bottom: 60px;
         }
       }
     }

@@ -1,8 +1,10 @@
+import firebase from "./firebase-app";
+const auth = firebase.auth();
+
 document.querySelectorAll("#header").forEach((page) => {
   const btnOpen = page.querySelector("#btn-open");
   const btnClose = page.querySelector("#btn-close");
   const btnExit = page.querySelector("#btn-exit");
-  const btnlogin = page.querySelector(".btn-login");
   const links = page.querySelector(".item-links");
 
   if (btnOpen) {
@@ -25,13 +27,15 @@ document.querySelectorAll("#header").forEach((page) => {
 
   if (btnExit) {
     btnExit.addEventListener("click", (e) => {
-      page.classList.toggle("logged");
+      sessionStorage.removeItem("addClassList");
+      auth.signOut();
+      window.location.href = "./";
     });
   }
 
-  if (btnlogin) {
-    btnlogin.addEventListener("click", (e) => {
-      page.classList.toggle("logged");
-    });
+  const logged = sessionStorage.getItem("addClassList");
+
+  if (logged) {
+    page.classList.add(`${logged}`);
   }
 });
